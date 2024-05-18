@@ -1,0 +1,82 @@
+
+
+//Mediante la ejecución de subprocesos principalmente formados por bucles PARA calculamos tanto el mayor, menor y la media
+//En estos mismos procesos vamos a mostrar por pantalla el resultado final de cada uno de ellos con un mensaje
+
+
+//Subproceso que calcula el numero mayor de todos los valores introducidos en el array mediante la ejecución de un bucle 
+
+SubProceso mayorN(array,num)
+	Definir numMayor Como Entero
+	numMayor=-32000
+	
+	Para i<-0 Hasta num-1 Con Paso 1 Hacer
+		Si array[i]>numMayor Entonces
+			numMayor<-array[i]
+		Fin Si
+		
+	Fin Para
+	Escribir "El mayor de los elementos del Array es: " numMayor
+FinSubProceso
+
+//Subproceso que calcula el numero menor de todos los valores introducidos en el array mediante la ejecución de un bucle 
+SubProceso menorN(array,num)
+	Definir numMenor Como Entero
+	numMenor=+32000
+
+	Para i<-0 Hasta num-1 Con Paso 1 Hacer
+		Si array[i]<numMenor Entonces
+			numMenor<-array[i]
+		Fin Si
+		
+	Fin Para
+	Escribir "El menor de los elementos del Array es: " numMenor
+FinSubProceso
+
+//Subproceso que sirve para pedir los distintos valores que introducimos en el array
+SubProceso pedirNum(array,num)
+	
+	Definir valores Como Entero
+	Para i<-0 Hasta num-1 Con Paso 1 Hacer
+		Escribir "Dame número: "
+		Leer valores
+		array[i]<-valores
+		
+	Fin Para
+	
+	
+	
+FinSubProceso
+//Subproceso  que calcula la media de los valores guardados en el array 
+SubProceso media(array,num)
+	Definir mediaN Como Entero
+	
+	mediaN=0
+	Para i<-0 Hasta num-1 Con Paso 1 Hacer
+		mediaN=mediaN+array[i]
+		
+	Fin Para
+	
+	Escribir "La media de los elementos del Array es: " mediaN/num
+
+FinSubProceso
+
+//En el Proceso llamamos a todos los subprocesos y pedimos el numero principal 
+Proceso mayorMenorMedia
+	
+	Definir num Como Entero
+	Escribir"Dame el número de elementos del array: "
+	Leer num;
+	
+	Dimension  array(num);
+	
+	pedirNum(array,num);
+	media(array,num);
+	mayorN(array,num);
+	menorN(array,num);
+	
+	
+	
+FinProceso
+
+	
