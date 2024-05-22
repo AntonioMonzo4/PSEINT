@@ -1,2 +1,2 @@
 # PSEINT
-Programas de entornos de desarrollo primera evaluación en Pseint.
+Programas de la asignatura entornos de desarrollo de la primera evaluación en Pseint.
